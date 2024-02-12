@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Browse Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <style>
+    #banner {
+      height: 360px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #product-image {
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+    }
+
+    #product {
+      text-align: center;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #reciept {
+      border: solid;
+      border-width: 1px;
+      min-width: 100px;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    #message {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="text-center mt-2 mb-2">ThePhoneShop</h1>
+    <a href="/"><img class="img-fluid" id="banner" src="/static/banner.png"></a></img>
+
+    <div id="product">
+      
+      <div id="message">Thanks for your purchase! Please review your order details below. </div>
+      
+      <div id="reciept">
+        <h2 class="text-center">Reciept</h2>
+
+        <div id="email">Email: {{data['email']}}</div>
+        <div id="name">Item: {{data['name']}}</div>
+        <div id="price">Price: {{data['price']}}</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
